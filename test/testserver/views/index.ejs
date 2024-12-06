@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%=title%></title>
+    <style>
+        @keyframes colorChange {
+            0% {
+                background-color: rgba(0,0,0,0.5);
+            }
+            25% {
+                background-color: rgba(255,0,0,0.5);
+            }
+            50% {
+                background-color: rgba(0,255,0,0.5);
+            }
+            75% {
+                background-color: rgba(0,0,255,0.5);
+            }
+            100% {
+                background-color: rgba(0,0,0,0.5);
+            }
+        }
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            border: solid 5px #ccc;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .item .stt {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            border-radius: 5px;
+            padding: 10px;
+            animation: colorChange 1s infinite; /* Thời gian đổi màu là 1 giây và lặp lại vô hạn */
+        }
+    </style>
+</head>
+<body>
+<div class="images">
+    <% for (let img of images) { %>
+    <a target="_blank" href="<%=img.src%>">
+        <div class="item">
+            <img src="<%=img.src%>" alt="<%=img.src%>" data-retries="0">
+            <div class="stt"><%=img.stt%></div>
+        </div>
+    </a>
+    <% } %>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const maxRetries = 20 ;
+
+        function handleImageError(img) {
+            let retries = parseInt(img.getAttribute('data-retries'), 10);
+
+            if (retries < maxRetries) {
+                retries++;
+                img.setAttribute('data-retries', retries);
+                setTimeout(() => {
+                    img.src = img.src; // Triggers a reload
+                }, 1000); // Retry after 1 second
+            } else {
+                // Optionally, you can show a placeholder or an error message
+                console.error('Failed to load image after several retries:', img.src);
+            }
+        }
+
+        document.querySelectorAll('.item img').forEach(img => {
+            img.addEventListener('error', () => handleImageError(img));
+        });
+    });
+</script>
+</body>
+</html>

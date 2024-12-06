@@ -1,0 +1,40 @@
+{
+	"name": "media-server",
+	"version": "1.0.0",
+	"description": "To make it easy for you to get started with GitLab, here's a list of recommended next steps.",
+	"repository": {
+		"type": "git",
+		"url": "https://gitlab.devsgd.com/sgd/media-server.git"
+	},
+	"main": "./bin/main.js",
+	"type": "module",
+	"scripts": {
+		"app": "node ./bin/main.js",
+		"dev": "nodemon ./bin/main.js",
+		"dev-web": "nodemon ./bin/main.js --type=webserver",
+		"dev-contentmanager": "nodemon ./bin/main.js --type=contentmanager",
+		"debugapp": "node --inspect-brk=0.0.0.0:9229 ./bin/main.js",
+		"test_os": "nodemon ./test/test_os.js"
+	},
+	"keywords": [
+		"media",
+		"server"
+	],
+	"imports": {
+		"#models/*": "./src/modules/commons/models/*",
+		"#commons/*": "./src/modules/commons/*",
+		"#loadimages/*": "./src/modules/loadimages/*",
+		"#storageimages/*": "./src/modules/storageimages/*"
+	},
+	"author": "SGD Team",
+	"license": "ISC",
+	"dependencies": {
+		"aws-sdk": "^2.1483.0",
+		"check-disk-space": "^3.4.0",
+		"sharp": "^0.32.6",
+		"suu": "file:src/libs/suu"
+	},
+	"devDependencies": {
+		"mocha": "^10.2.0"
+	}
+}

@@ -1,0 +1,95 @@
+{
+	"app_xda_token": "wqv73nlwngnziroeulj0d1t3kasglny9",
+	"use_xda_token": "2c3e3ae21aab34ee1e569cc78460e8541c80c524",
+	"max_restart_process": 30,
+	"app_name": "media-server",
+	"request_keepalive": 5000,
+	"app_timeout": "120s",
+	"max_process": 1,
+	"web_instance": 8,
+	"host": "localhost",
+	"port": "8100",
+	"api_request_prefix": "api",
+	"media_cacheable": true,
+	"media_cacheable_time": 3600,
+	"storage_media_location": "/home/sgdrop/datastorage/contents",
+	"cache_media_location": "/home/sgdrop/datastorage/cached",
+	"max_memory_allow_per_worker_process": 1024,
+	
+	"cache": {
+		"adapter": "redis",
+		"host": "localhost",
+		"port": "6379",
+		"prefix": "mediaserver"
+	},
+	
+	"database": {
+		"host": "localhost",
+		"port": "27017",
+		"name": "mediaserver",
+		"debug": false
+	},
+	
+	"mongodb_data_dir": "",
+	
+	"modules": {
+		"loadimages": true,
+		"storageimages": false
+	},
+	
+	"redis": {
+		"host": "127.0.0.1",
+		"port": 6379,
+		"prefix": "sdg"
+	},
+	
+	"jwt": {
+		"secretOrKey": "Suuforest",
+		"expiresIn": "24h"
+	},
+	
+	"memcached": {
+		"host": "localhost",
+		"port": "11211"
+	},
+	
+	"s3storage": {
+		"accessKeyId": "N5HKBQQ1MIQTM11FWMWX",
+		"secretAccessKey": "3Qq6N8pO04JxwODRogeC3QPdoN1tujuaW6VAxAte",
+		"region": "us-east-1",
+		"bucket": "mediadata",
+		"endpoint": "sjc1.vultrobjects.com"
+	},
+	
+	"session": {
+		"secret": "Lct$JMbK5TdZ#9X4FCB!DsqVKk2fjpyapFdFX&1X8IYHNfHlaXhPPETabiOJH00W",
+		"collection": "customersessionstorages",
+		"ttl": 2592000
+	},
+	
+	"request_keepalive": 0,
+	"request_timeout": "60s",
+	"request_connection": "close",
+	"request_cache_expires": 3600,
+	"request_cache": true,
+	"request_cache_prefix": "mediaserver",
+	"request_parallel_limit": 1000,
+
+	"min_free_disk_space": 3,
+	"min_clean_disk_space": 3,
+	"max_clean_disk_space": 5,
+	"min_clean_media_items": 30000,
+	"max_clean_media_items": 50000,
+
+	"cache_min_free_disk_space": 3,
+	"cache_min_clean_disk_space": 3,
+	"cache_max_clean_disk_space": 5,
+	"cache_min_clean_items": 30000,
+	"cache_max_clean_items": 50000,
+	
+	"listprocess": {
+		"contentmanager": {
+			"enabled": true
+		}
+	}
+}

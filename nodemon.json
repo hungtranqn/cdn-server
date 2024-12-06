@@ -1,0 +1,9 @@
+{
+	"ignore": [
+		"*.log"
+	],
+	"execMap": {
+		"js": "node"
+	},
+	"ext": "js,json, env"
+}

@@ -1,0 +1,17 @@
+{
+	"apps": [
+		{
+			"name": "mediaserver",
+			"script": "node ./bin/main.js",
+			"instances": 1,
+			"exec_mode": "fork",
+			"env": {
+				"NODE_ENV": "production"
+			},
+			"env_production": {
+				"NODE_ENV": "production"
+			},
+			"max_memory_restart": "1000M"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"ebay": {
+		"host": "i.ebayimg.com",
+		"service": "ebay"
+	},
+	"amz": {
+		"host": "images-na.ssl-images-amazon.com",
+		"service": "amazon"
+	},
+	"mamz": {
+		"host": "m.media-amazon.com",
+		"service": "amazon"
+	},
+	"sf": {
+		"host": "images.suuforest.com",
+		"service": "suuforest"
+	},
+	"sfd": {
+		"host": "images.suuforest.com",
+		"service": "suuforest"
+	},
+	"ali1": {
+		"host": "ae01.alicdn.com",
+		"service": "aliexpress"
+	},
+	"ali2": {
+		"host": "ae02.alicdn.com",
+		"service": "aliexpress"
+	},
+	"ali3": {
+		"host": "ae03.alicdn.com",
+		"service": "aliexpress"
+	},
+	"ali4": {
+		"host": "ae04.alicdn.com",
+		"service": "aliexpress"
+	},
+	"ali5": {
+		"host": "ae05.alicdn.com",
+		"service": "aliexpress"
+	}
+}

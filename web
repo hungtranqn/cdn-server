@@ -1,0 +1,4 @@
+#!/bin/env bash
+export DEBUG="*"
+export PORT=8100
+npm run dev-web

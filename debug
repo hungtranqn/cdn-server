@@ -1,0 +1,8 @@
+#!/bin/env bash
+DEBUG_PORT=9229
+export DEBUGMODE=true
+export DEBUG="suu:*"
+export DEBUG_PORT
+export WEB_INSTANCE=1
+
+nodemon --inspect-brk=0.0.0.0:$DEBUG_PORT ./bin/main.js --type=contentmanager

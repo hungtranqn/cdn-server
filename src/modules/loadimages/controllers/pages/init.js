@@ -1,0 +1,1 @@
+export const CONTROLLER_DIRECTORY = suu.fileURLToDirname(import.meta.url);

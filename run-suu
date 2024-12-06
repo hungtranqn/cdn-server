@@ -1,0 +1,4 @@
+#!/bin/env bash
+export DEBUG="suu:app:*"
+export PORT=8100
+npm run app

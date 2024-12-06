@@ -1,0 +1,5 @@
+#!/bin/env bash
+export DEBUG="test:*"
+TEST_SCRIPT="test_thread.js"
+#nodemon --exec "mocha ./test/$TEST_SCRIPT"
+nodemon ./test/$TEST_SCRIPT

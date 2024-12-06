@@ -1,0 +1,36 @@
+{
+	"small": {
+		"width": 400
+	},
+	
+	"medium": {
+		"width": 650
+	},
+	
+	"large": {
+		"width": 800
+	},
+	
+	"huge": {
+		"width": 1200
+	},
+	
+	"extra": {
+		"width": 1500
+	},
+	
+	"shop": {
+		"width": 1500,
+		"thumbnail": true,
+		"maxheight": 1500,
+		"maxwidth": 1500
+	},
+	
+	"feed": {
+		"width": 1500,
+		"thumbnail": true,
+		"maxheight": 1500,
+		"maxwidth": 1500
+	}
+	
+}
